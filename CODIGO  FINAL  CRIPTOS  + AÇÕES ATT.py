@@ -13,7 +13,7 @@ from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 ativos_acoes = ['AAPL34.SA', 'ITUB4.SA', 'BBDC4.SA', 'MGLU3.SA', 'PETR4.SA', 'VALE3.SA', 'WEGE3.SA', 'RADL3.SA', 'OIBR3.SA', 'SMAL11.SA']
 ativos_criptos = ['BTC-USD', 'ETH-USD', 'XRP-USD', 'LTC-USD', 'ADA-USD', 'SOL-USD', 'BNB-USD', 'DOGE-USD', 'LINK-USD', 'DOT-USD']
 
-# Função para ler os dados do arquivo CSV e fazer a análise
+#Função para ler os dados do arquivo CSV e fazer a análise
 
 def analisar_ativo(ativo):
     if ativo in ativos_acoes:
