@@ -38,12 +38,12 @@ Uma das grandes facilidades do projeto é a integração com a biblioteca `yfina
 Aqui estão alguns exemplos dos gráficos gerados pelo código:
 
 - **Exemplo de Análise MACD,  RSI, Fibonacci,  Markowitz**:
-  ![Exemplo](ex1analise.png)
-  ![Exemplo](ex2analise.png)
-  ![Exemplo](ex3analise.png)
-  ![Exemplo](ex4analise.png)
-  ![Exemplo](ex5analise.png)
-  ![Exemplo](ex6analise.png)
+  ![Exemplo](imagens/ex1analise.png)
+  ![Exemplo](imagens/ex2analise.png)
+  ![Exemplo](imagens/ex3analise.png)
+  ![Exemplo](imagens/ex4analise.png)
+  ![Exemplo](imagens/ex5analise.png)
+  ![Exemplo](imagens/ex6analise.png)
   
 
 ### Como Executar o Projeto
