@@ -33,8 +33,22 @@ Uma das grandes facilidades do projeto é a integração com a biblioteca `yfina
   - **Atualização em tempo real**: O código utiliza os dados mais recentes disponíveis, permitindo análises precisas e atualizadas.
   - **Flexibilidade**: Você pode escolher qualquer ativo listado no Yahoo Finance, tanto ações quanto criptomoedas, facilitando análises rápidas e eficientes.
 
+### Exemplos de Gráficos Gerados
+
+Aqui estão alguns exemplos dos gráficos gerados pelo código:
+
+- **Exemplo de Análise MACD,  RSI, Fibonacci,  Markowitz**:
+  ![Exemplo](ex1analise.png)
+  ![Exemplo](ex2analise.png)
+  ![Exemplo](ex3analise.png)
+  ![Exemplo](ex4analise.png)
+  ![Exemplo](ex5analise.png)
+  ![Exemplo](ex6analise.png)
+  
+
 ### Como Executar o Projeto
 
 1. **Clone o repositório:**
    ```bash
    git clone <URL do seu repositório>
+
