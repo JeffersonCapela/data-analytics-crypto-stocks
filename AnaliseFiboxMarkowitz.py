@@ -18,7 +18,7 @@ ativos_criptos = ['BTC-USD', 'ETH-USD', 'XRP-USD', 'LTC-USD', 'ADA-USD', 'SOL-US
 def analisar_ativo(ativo):
     if ativo in ativos_acoes:
         # Obter dados do Yahoo Finance para ações
-        df = yf.download(ativo, start="2014-11-08", end="2024q-04-14")
+        df = yf.download(ativo, start="2014-11-08", end="2024-04-14")
     else:
         # Obter dados do Yahoo Finance para criptomoedas
         df = yf.download(ativo, start="2014-11-08", end="2024-04-14")
