@@ -1,27 +1,40 @@
-Análise de Dados para Criptomoedas e Ações
+# Data Analytics - Crypto & Stocks
 
-Este repositório contém um conjunto de scripts em Python para realizar análises de dados financeiros, com foco em criptomoedas e ações. Utilizando bibliotecas como pandas, numpy, matplotlib e yfinance, o projeto permite:
+## Descrição
+Este projeto é focado na análise de dados de ações e criptomoedas utilizando diversas ferramentas de análise técnica e financeira. O objetivo é facilitar a visualização de tendências e a construção de carteiras de investimentos otimizadas. Uma das principais funcionalidades do projeto é a coleta de dados em tempo real utilizando a biblioteca `yfinance`, eliminando a necessidade de um dataset pré-carregado.
 
-Baixar dados históricos de criptomoedas e ações do Yahoo Finance:
-- Realizar análises técnicas e estatísticas dos dados financeiros.
-- Visualizar gráficos interativos para entender o desempenho dos ativos ao longo do tempo.
-- Otimizar carteiras de investimento com base na Teoria Moderna do Portfólio de Markowitz.
+### Funcionalidades
 
-Como Utilizar:
-- Clone este repositório em sua máquina local.
-- Instale as dependências necessárias listadas no arquivo requirements.txt.
-- Execute os scripts Python conforme necessário para realizar diferentes análises.
-- Explore os resultados e visualize os gráficos gerados.
+#### 1. **Análise Técnica com MACD e RSI** (Novas Atualizações)
+Foi incluído um novo código que realiza análises detalhadas utilizando os indicadores **MACD** (Moving Average Convergence Divergence) e **RSI** (Relative Strength Index). Estes indicadores são cruciais para avaliar a força de um ativo e identificar tendências de mercado.
 
-Estrutura do Projeto:
-- CODIGO  FINAL  CRIPTOS  + AÇÕES ATT.py: Script principal para análise de dados de criptomoedas e ações.
-- README.md: Este arquivo, que fornece uma visão geral do projeto e instruções de uso.
-- requirements.txt: Arquivo contendo as dependências Python necessárias para executar o projeto.
-  
-LICENSE: Licença de código aberto que governa o uso deste software.
+- **MACD**: O MACD consiste na diferença entre duas médias móveis exponenciais, uma de curto prazo e outra de longo prazo. Além disso, o gráfico inclui:
+  - **Linha de Sinal**: uma média da linha MACD, utilizada para identificar pontos de entrada ou saída.
+  - **Histograma**: a diferença entre a linha MACD e a linha de sinal, visualizando claramente as divergências de alta e baixa.
 
-Contribuições:
-- Contribuições são bem-vindas! Se você tiver sugestões de melhorias, novas funcionalidades ou correções de bugs, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+- **RSI**: O RSI mede a força ou fraqueza de um ativo baseado nos movimentos de preços recentes. Ajuda a identificar se um ativo está sobrecomprado ou sobrevendido, facilitando decisões de compra e venda.
 
-Autor
-- Este projeto foi desenvolvido por Jefferson Daniel Roque Capela
+#### 2. **Níveis de Fibonacci**
+O projeto também inclui a aplicação da análise de **Fibonacci** para identificar possíveis níveis de suporte e resistência no mercado. Utilizando os **retracements de Fibonacci**, o código facilita a previsão de reversões de preço em diferentes níveis-chave, que são amplamente usados para calcular pontos de entrada e saída no mercado.
+
+Os níveis de Fibonacci são uma ferramenta técnica que divide as distâncias entre os preços mais altos e baixos em proporções matemáticas, como 23,6%, 38,2%, 50%, 61,8%, e 100%. Esses níveis ajudam a prever reversões de tendência e são úteis para traders que buscam pontos de reversão de suporte e resistência.
+
+#### 3. **Carteira de Markowitz**
+Além das análises técnicas, o projeto inclui uma implementação da **Carteira de Markowitz** (Teoria Moderna de Portfólios). Esta teoria ajuda a otimizar carteiras de investimento balanceando o risco e o retorno esperado. Usando essa abordagem, o código calcula:
+- **Retorno esperado**: baseado na média ponderada dos retornos dos ativos.
+- **Risco**: através da volatilidade dos ativos.
+- **Fronteira eficiente**: a combinação de ativos que oferece o maior retorno esperado para um determinado nível de risco.
+
+#### 4. **Coleta de Dados Automática com `yfinance`**
+Uma das grandes facilidades do projeto é a integração com a biblioteca `yfinance`, que coleta dados financeiros diretamente da internet, eliminando a necessidade de carregar datasets manualmente. Isso permite ao usuário realizar análises sobre qualquer ativo financeiro disponível no Yahoo Finance sem precisar de um banco de dados prévio.
+
+- **Vantagens**:
+  - **Automatização**: Não há necessidade de preparar datasets; o código coleta automaticamente os dados mais recentes dos ativos.
+  - **Atualização em tempo real**: O código utiliza os dados mais recentes disponíveis, permitindo análises precisas e atualizadas.
+  - **Flexibilidade**: Você pode escolher qualquer ativo listado no Yahoo Finance, tanto ações quanto criptomoedas, facilitando análises rápidas e eficientes.
+
+### Como Executar o Projeto
+
+1. **Clone o repositório:**
+   ```bash
+   git clone <URL do seu repositório>
