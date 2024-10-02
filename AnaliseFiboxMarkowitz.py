@@ -8,8 +8,6 @@ from ta import add_all_ta_features
 import cvxpy as cp
 from tabulate import tabulate
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from ta.trend import SMAIndicator, EMAIndicator, MACD
-from ta.momentum import RSIIndicator
 
 # Lista de ativos de ações e criptomoedas
 ativos_acoes = ['AAPL34.SA', 'ITUB4.SA', 'BBDC4.SA', 'MGLU3.SA', 'PETR4.SA', 'VALE3.SA', 'WEGE3.SA', 'RADL3.SA', 'OIBR3.SA', 'SMAL11.SA']
@@ -261,43 +259,3 @@ plt.xticks(rotation=45)
 
 # Exibir a tabela no console
 print(tabulate(ranking_df, headers='keys', tablefmt='pretty'))
-
-#Incluindo análisesRSI e MCD
-
-# Função para baixar os dados e calcular RSI
-def calcular_rsi(ativo):
-    if ativo in ativos_acoes:
-        df = yf.download(ativo, start="2014-11-08", end="2024-04-14")
-    else:
-        df = yf.download(ativo, start="2014-11-08", end="2024-04-14")
-
-    # Calcular o RSI usando o preço de fechamento
-    rsi = RSIIndicator(close=df['Close'], window=14)  # 14 períodos por padrão
-    df['RSI'] = rsi.rsi()  # Adicionar a coluna RSI ao DataFrame
-
-    # Plotar o gráfico de RSI
-    plt.figure(figsize=(10, 6))
-    plt.plot(df.index, df['RSI'], label='RSI', color='purple')
-    plt.axhline(70, linestyle='--', alpha=0.5, color='red')  # Linha de sobrecompra
-    plt.axhline(30, linestyle='--', alpha=0.5, color='green')  # Linha de sobrevenda
-    plt.title(f'RSI de {ativo}')
-    plt.xlabel('Data')
-    plt.ylabel('RSI')
-    plt.legend()
-    plt.show()
-
-    return df
-
-# Dicionário para armazenar os DataFrames com o RSI
-dataframes_acoes = {}
-dataframes_criptos = {}
-
-# Calcular o RSI para todos os ativos de ações
-for ativo in ativos_acoes:
-    df = calcular_rsi(ativo)
-    dataframes_acoes[ativo] = df
-
-# Calcular o RSI para todos os ativos de criptomoedas
-for ativo in ativos_criptos:
-    df = calcular_rsi(ativo)
-    dataframes_criptos[ativo] = df
